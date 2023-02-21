@@ -87,6 +87,8 @@ form .inputs input[type="email"], input[type="password"]{
 }
 
 form button{
+    display: flex;
+    margin: auto;
     border-radius: 15px;
     font-family: 'Faune';
     font-size: 30px;
