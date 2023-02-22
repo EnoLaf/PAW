@@ -30,6 +30,8 @@ body{
     --floral-white: #FEF9F0;
 
     background-color: var(--floral-white);
+
+    text-align: center;
 }
 
 #connexion{
@@ -67,7 +69,7 @@ img{
 }
 
 form .inputs{
-    padding-top: 250px;
+    padding-top: 350px;
     display: flex;
     flex-direction: column;
 }
@@ -82,13 +84,20 @@ form .inputs input[type="email"], input[type="password"]{
     outline: none;
     width: 300px;
 }
-.checkbox{
-    cursor: pointer;
+
+form .checkbox{
+    padding-top: 25px;
+    font-size: 16px;
+}
+
+form .buttons{
+    padding-top: 25px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 form button{
-    display: flex;
-    margin: auto;
     border-radius: 15px;
     font-family: 'Faune';
     font-size: 30px;
@@ -114,6 +123,5 @@ form button[type="button"]{
 
 form p.forgotten-password{
     padding-top: 70px;
-    text-align: center;
     font-size: 25px;
 }
