@@ -6,14 +6,14 @@
 /* Webfont: Faune */
 @font-face {
     font-family: 'Faune';
-    src: url('./fonts/faune.text-regular.ttf') format('truetype'); /* Safari, Android, iOS */
+    src: url('./fonts/faune.text-regular.ttf') at('truetype'); /* Safari, Android, iOS */
              font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
 }
 @font-face {
     font-family: 'Faune Bold';
-    src: url('./fonts/faune.text-bold.ttf') format('truetype'); /* Safari, Android, iOS */
+    src: url('./fonts/faune.text-bold.ttf') at('truetype'); /* Safari, Android, iOS */
              font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
@@ -30,6 +30,7 @@ body{
     --floral-white: #FEF9F0;
 
     background-color: var(--floral-white);
+    color: var(--eerie-black);
 
     text-align: center;
 }
@@ -68,14 +69,18 @@ img{
     top: 75px;
 }
 
-form .inputs{
+input{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#inputs-connexion{
     padding-top: 350px;
     display: flex;
     flex-direction: column;
 }
 
-form .inputs input[type="email"], input[type="password"]{
-    padding: 15px;
+#inputs-connexion input[type="email"], input[type="password"]{
+    padding: 10px;
     border-radius: 15px;
     border: 2px solid var(--princeton-orange);
     background-color: var(--floral-white);
@@ -85,43 +90,277 @@ form .inputs input[type="email"], input[type="password"]{
     width: 300px;
 }
 
-form .checkbox{
-    padding-top: 25px;
-    font-size: 16px;
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: var(--floral-white);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
 }
 
-form .buttons{
+input[type="checkbox"]:after{
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 15px;
+    color: var(--floral-white);
+    display: none;
+}
+
+input[type="checkbox"]:checked{
+    background-color: var(--tawny);
+}
+
+input[type="checkbox"]:checked:after{
+    display: block;
+}
+
+#checkbox{
+    font-size: 20px;
+    position: absolute;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+#checkbox label{
+    padding-left: 10px;
+}
+
+#buttons{
     padding-top: 25px;
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
-form button{
+button{
     border-radius: 15px;
     font-family: 'Faune';
     font-size: 30px;
     outline: none;
-    cursor: pointer;
     width: 250px;
 }
 
-form button[type="submit"]{
+#buttons #submit-button-connexion{
     padding: 3px 43px;
     border: none;
     color: var(--floral-white);
     background-color: var(--princeton-orange);
     margin-bottom: 20px;
+    margin-top: 25px;
 }
 
-form button[type="button"]{
+#buttons #register-button-connexion{
     padding: 3px 22px;
     border: 2px solid var(--princeton-orange);
     color: var(--princeton-orange);
     background-color: var(--floral-white);
 }
 
-form p.forgotten-password{
-    padding-top: 70px;
+a{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     font-size: 25px;
+    text-decoration: none;
+    color: var(--eerie-black);
+}
+
+#password{  
+    padding-top: 50px;
+}
+
+#forgotten-password{
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--eerie-black);
+}
+
+.inputs-forgotten-password{
+    padding-top: 177px;
+    text-align: left;
+    padding-left: 45px;
+}
+
+.inputs-forgotten-password #email-span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 24px;
+    transform: translateX(65px) translateY(-12px);
+    padding: 0 10px;
+    background: var(--floral-white);
+}
+
+.inputs-forgotten-password #email-input{
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid var(--cocoa-brown);
+    background-color: var(--floral-white);
+    font-size: 20px;
+    outline: none;
+    width: 300px;
+    height: 60px;
+}
+
+#email-button{
+    align-items: center;
+    padding: 3px 24px;
+    border: none;
+    color: var(--floral-white);
+    background-color: var(--princeton-orange);
+    margin-top: 60px;
+}
+
+.return-to-connexion{
+    padding-top: 407px;
+}
+
+.return-connexion{
+    padding-top: 94px;
+}
+
+#register{
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--eerie-black);
+}
+
+.inputs-register{
+    padding-top: 173px;
+    text-align: left;
+    padding-left: 45px;
+}
+
+.inputs-register span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 24px;
+    transform: translateX(65px) translateY(-12px);
+    padding: 0 10px;
+    background: var(--floral-white);
+}
+
+.inputs-register input{
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--floral-white);
+    font-size: 20px;
+    outline: none;
+    width: 300px;
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+.inputs-register #name-input{
+    border: 2px solid var(--selective-yellow);
+}
+
+.inputs-register #first-name-input{
+    border: 2px solid var(--princeton-orange);
+}
+
+.inputs-register #email-input{
+    border: 2px solid var(--cocoa-brown);
+}
+
+.inputs-register #password-input{
+    border: 2px solid var(--tawny);
+}
+
+#register-button{
+    align-items: center;
+    padding-top: 101px;
+    padding: 3px 33px;
+    border: none;
+    color: var(--floral-white);
+    background-color: var(--princeton-orange);
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+#add-animal{
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--eerie-black);
+}
+
+.inputs-add-animal{
+    padding-top: 72px;
+    text-align: left;
+    padding-left: 45px;
+}
+
+.inputs-add-animal span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 24px;
+    transform: translateX(65px) translateY(-12px);
+    padding: 0 10px;
+    background: var(--floral-white);
+}
+
+.inputs-add-animal input{
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--floral-white);
+    font-size: 20px;
+    outline: none;
+    width: 300px;
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+.inputs-add-animal #specie-input{
+    border: 2px solid var(--selective-yellow);
+}
+
+.inputs-add-animal #breed-input{
+    border: 2px solid var(--princeton-orange);
+}
+
+.inputs-add-animal #name-input{
+    border: 2px solid var(--cocoa-brown);
+}
+
+.inputs-add-animal #dob-input{
+    border: 2px solid var(--tawny);
+}
+
+.inputs-add-animal #weight-input{
+    border: 2px solid var(--selective-yellow);
+}
+
+.inputs-add-animal #id-input{
+    border: 2px solid var(--princeton-orange);
+}
+
+#add-animal-button{
+    align-items: center;
+    margin-top: 60px;
+    padding: 3px 29px;
+    border: none;
+    color: var(--floral-white);
+    background-color: var(--princeton-orange);
+}
+
+.return-animals{
+    padding-top: 60px;
+    font-size: 20px;
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAW</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+<body>
+    <section id="connexion">
+        <img src="./img/PAW_logo.png">
+        <div>
+            <div id="inputs-connexion">
+                <input id="email-connexion" type="email" placeholder="Email">
+                <input id="password-connexion" type="password" placeholder="Mot de passe">
+            </div>
+
+            <div id="checkbox">
+                <input type="checkbox" id="check">
+                <label for="check">Rester connecté</label>
+            </div>
+
+            <div id="buttons">
+                <button @click="openChooseSpeciePage" id="submit-button-connexion" type="submit">CONNEXION</button>
+                <button @click="openRegisterPage" id="register-button-connexion" type="button">S'ENREGISTRER</button>
+            </div>
+            
+            <a href="./forgotten_password.html" id="password">Mot de passe oublié?</a>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="connexion.js"></script>
+
+</body>
+</html>

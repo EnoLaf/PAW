@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAW</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="add-animal">
+
+            <div class="inputs-add-animal">
+                <input id="specie-input" type="text">
+                <span id="specie-span">Espèce</span>
+                
+                <input id="breed-input" type="text">
+                <span id="breed-span">Race</span>
+                
+                <input id="name-input" type="text">
+                <span id="name-span">Nom</span>
+                
+                <input id="dob-input" type="date">
+                <span id="dob-span">Date de naissance</span>
+                
+                <input id="weight-input" type="text">
+                <span id="weight-span">Poids</span>
+                
+                <input id="id-input" type="text">
+                <span id="id-span">N° Puce (optionnel)</span>
+            </div>
+
+            <div class="buttons">
+                <button @click="openChooseSpeciePage" id="add-animal-button" type="submit">Ajouter Animal</button>
+            </div>
+            
+            <a href="./choose-specie.html" class="return-animals">J'ai déjà enregistré mon animal</a>
+
+    </section>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="add-animal.js"></script>
+
+</body>
+</html>
